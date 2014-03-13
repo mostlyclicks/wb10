@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-RefBase011500::Application.initialize!
+RefBase01::Application.initialize!
