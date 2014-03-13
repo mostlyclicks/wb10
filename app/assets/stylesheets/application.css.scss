@@ -13,3 +13,8 @@
  *= require_self
  *= require_tree .
  */
+@import 'overrides.css.scss';
+@import 'variables.css.scss';
+@import 'custom.css.scss';
+@import 'responsive.css.scss';
+@import 'bootstrap';
