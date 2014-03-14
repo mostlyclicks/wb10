@@ -1,0 +1,23 @@
+<div id="pre-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <i class="fa fa-phone"></i> 555-555-5555 | <i class="fa fa-envelope"></i> <a href="mailto:info@wieserbrothers.com">info@wieserbrothers.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= image_tag 'logo.png', class: 'img-responsive' %>
+      </div>
+    </div>
+  </div>
+
+</div>
+<h1 id='logo'>
+  <%= link_to Refinery::Core.site_name, refinery.root_path %>
+</h1>
+<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>

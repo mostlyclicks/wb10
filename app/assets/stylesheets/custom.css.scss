@@ -1,1 +1,33 @@
+@import 'variables.css.scss';
 /* custom styles */
+body {
+  margin:10px;
+}
+
+h1 {
+  font-family: $main-font;
+  color:$wb-green;
+}
+p, li {
+  color:$wb-txt-color;
+}
+
+#pre-header {
+  text-align:center;
+  background-color:darken($wb-green, 7%);
+  font-size:12px;
+  color:$white;
+  padding:5px;
+  a {
+    color:$wb-orange;
+  }
+}
+
+#top {
+  background-color:$wb-green;
+  height:155px;
+  img {
+    margin-top:25px;
+  }
+
+}
