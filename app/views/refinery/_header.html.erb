@@ -39,7 +39,7 @@
         <li><a href="#">Contact Us</a></li>
 
       </ul>
-     
+     <%#= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -47,9 +47,8 @@
       </div>
     </div>
   </div>
-
 </div>
-<h1 id='logo'>
-  <%= link_to Refinery::Core.site_name, refinery.root_path %>
-</h1>
-<%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+<!-- <h1 id='logo'>
+  <%#= link_to Refinery::Core.site_name, refinery.root_path %>
+</h1> -->
+

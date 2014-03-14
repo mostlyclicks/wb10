@@ -1,1 +1,38 @@
-<%= render '/refinery/content_page' %>
+<%#= render '/refinery/content_page' %>
+<div id="home-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <%= image_tag 'harbour-view.jpg', class: 'img-responsive'  %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="buckets">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+          <div class="well well-sm">
+            <h3>Why Wieser</h3>
+            <%= image_tag 'contractors.jpg', class: 'img-responsive' %>
+            <small><i class="fa fa-chevron-right"></i> Learn more about Wieser Brothers</small>
+          </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well well-sm">
+          <h3>Projects</h3>
+          <%= image_tag 'hero_8918.jpg', class: 'img-responsive' %>
+          <small><i class="fa fa-chevron-right"></i> View our latest projects</small>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well well-sm" id="testimonial">
+          <h3>Testimonials</h3>
+          <blockquote>Metropolitan Market Place offers the perfect combination of modern convenience and comfort.<small>John Smith, CEO</small></blockquote>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
