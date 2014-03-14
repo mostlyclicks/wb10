@@ -1,1 +1,10 @@
+@import 'variables.css.scss';
 /* bootstrap overrides - http://getbootstrap.com/customize/ */
+$navbar-default-bg:transparent;
+$navbar-default-color:$white;
+$navbar-default-link-color:$white;
+$navbar-default-link-active-color:$white;
+$navbar-default-link-hover-color:$wb-orange;
+$navbar-default-link-hover-bg:darken($wb-green, 2%);
+$navbar-height:40px;
+$navbar-border-radius:0px;

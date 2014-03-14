@@ -25,9 +25,20 @@ p, li {
 
 #top {
   background-color:$wb-green;
+  background-image:url('dots.png');
+  background-repeat:repeat-x;
+  background-position-y:64px;
+
   height:155px;
   img {
-    margin-top:25px;
+    padding:0 10px;
+    margin-top:26px;
+    background-color:$wb-green;
+
+  }
+  #nav-side {
+    padding-top:110px;
+    
   }
 
 }
