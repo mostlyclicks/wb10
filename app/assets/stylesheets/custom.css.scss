@@ -51,13 +51,32 @@ p, li {
 #home-main {
   background-color:darken($wb-green,2%);
   background-image:url('triangular3.gif');
-
+  position:relative;
   max-height:520px;
   padding:20px 0 80px 0;
   img {
     margin:0px auto;
     border:10px solid rgba(0,0,0,.2);
   }
+  #overlay {
+    position:absolute;
+    height:220px;
+    background-color:rgba(0,0,0,.8);
+    z-index:20;
+    top:25px;
+    right:0px;
+    color:$white;
+    padding:20px;
+    box-shadow:1px 1px 10px rgba(0,0,0, .7);
+    border-top:1px dotted rgba(255,255,255,.5);
+    border-left:8px solid $wb-skyblue;
+    border-bottom:1px solid rgba(255,255,255,.2);
+    border-right:1px solid rgba(255,255,255,.2);
+    p, h1 {
+      color:rgba(255,255,255, .7);
+    }
+  }
+
 }
 
 #buckets {
