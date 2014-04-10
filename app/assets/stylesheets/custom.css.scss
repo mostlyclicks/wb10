@@ -116,22 +116,24 @@ p, li {
     background-color:$white;
     padding-top:20px;
   }
-  #testimonial {
+  #trust {
     background-color:$white;
     border:1px solid darken($wb-orange, 10%);
     color:darken($wb-orange, 20%);
     h3 {
       background-color:$white;
       color:darken($wb-orange, 30%);
+      font-size:48px;
+      line-height: 1.25em;
     }
   }
   h3 {
-    font-family: $main-font;
+    font-family: $headline-font;
     background-color:$white;
-    padding:5px 10px;
+    padding:0px 10px;
     font-size:17px;
-    margin-top:10px;
-    display:inline;
+    margin-top:0px;
+    // display:inline;
     text-transform: uppercase;
     font-weight: bold;
     color:rgba(0,0,0,.3);
