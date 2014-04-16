@@ -52,14 +52,15 @@ p, li {
 .navbg {
   position:relative;
   background-color:rgba(0,74,48, .8);
+  z-index: 2000;
 }
 
 .navbg .nav {
   // position:absolute;
-  z-index: 20;
+  
 }
 
-#main-image {
+.main-image {
   min-height:780px;
   background-size:cover;
   background-position-y:50%;
@@ -67,6 +68,48 @@ p, li {
   background-repeat:no-repeat;
  
 }
+
+.carousel-inner {
+  z-index:0;
+}
+
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      -webkit-transition-property: opacity;
+      -moz-transition-property: opacity;
+      -o-transition-property: opacity;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+    
+  }
+}
+
+
+
+
 
 #home-main {
   background-color:darken($wb-green,2%);
