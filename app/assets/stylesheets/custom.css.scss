@@ -20,7 +20,7 @@ p, li {
 
 #pre-header {
   text-align:center;
-  background-color:darken($wb-green, 7%);
+  background-color:$wb-green-dark;
   font-size:12px;
   color:$white;
   padding:5px;
@@ -30,7 +30,7 @@ p, li {
 }
 
 #top {
-  background-color:rgba(0,74,48, 1);
+  background-color:$wb-green;
   // background-image:url('dots.png');
   background-repeat:repeat-x;
   background-position-y:64px;
@@ -38,7 +38,7 @@ p, li {
   height:110px;
   img {
     padding:0 10px;
-    margin-top:15px;
+    margin-top:11px;
     background-color:$wb-green;
 
   }
@@ -51,7 +51,7 @@ p, li {
 
 .navbg {
   position:relative;
-  background-color:rgba(0,74,48, .8);
+  background-color:rgba(5,42,29, .5);
   z-index: 2000;
 }
 
@@ -105,6 +105,10 @@ p, li {
     z-index: 2;
     
   }
+
+  .carousel-indicators {
+    bottom:80px;
+  }
 }
 
 
@@ -152,19 +156,18 @@ p, li {
   .well {
     margin-top:-20px;
     min-height:250px;
-    box-shadow:1px 1px 5px rgba(0,0,0,.2);
-    // background-image:url('dots.png');
+    box-shadow:1px 1px 9px rgba(0,0,0,.4);
     background-repeat:repeat-x;
     background-position-y:15px;
-    background-color:$white;
+    border-top:2px solid darken($white, 2%);
     padding-top:20px;
   }
   #trust {
-    background-color:$white;
-    border:1px solid darken($wb-orange, 10%);
+    
+    border-top:2px solid darken($white, 2%);
     color:darken($wb-orange, 20%);
     h3 {
-      background-color:$white;
+      
       color:darken($wb-orange, 30%);
       font-size:48px;
       line-height: 1.10em;
@@ -172,7 +175,7 @@ p, li {
   }
   h3 {
     font-family: $headline-font;
-    background-color:$white;
+   
     padding:0px 10px;
     font-size:17px;
     margin-top:0px;
@@ -210,4 +213,5 @@ footer {
   padding:20px;
   margin-top:0px;
   min-height:10vh;
+  box-shadow:-1px 0px 14px rgba(0,0,0,.4);
 }

@@ -1,11 +1,26 @@
 /* variables */
 $main-font:'Varela', sans-serif;
 $headline-font:'Oswald', sans-serif;
-$wb-green:#004a30;
+// $wb-green:#004a30;
+$wb-green:rgba(0,87,60, 1);
+$wb-green-dark:rgba(5,42,9, 1);
 // 0,74,48
 $wb-skyblue:#6dd0f7;
 // $wb-orange:#ff6914;
 $wb-orange:lighten(gray,47%);
 $wb-txt-color:#808080;
 $white:#ffffff;
+
+#buckets{
+  .well {
+    background: #d7d7d7; /* Old browsers */
+background: -moz-linear-gradient(top,  #d7d7d7 1%, #fcfcfc 22%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#d7d7d7), color-stop(22%,#fcfcfc)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d7d7d7 1%,#fcfcfc 22%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d7d7d7 1%,#fcfcfc 22%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d7d7d7 1%,#fcfcfc 22%); /* IE10+ */
+background: linear-gradient(to bottom,  #d7d7d7 1%,#fcfcfc 22%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7d7d7', endColorstr='#fcfcfc',GradientType=0 ); /* IE6-9 */
+  }
+}
 
