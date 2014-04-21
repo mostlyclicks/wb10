@@ -207,11 +207,20 @@ p, li {
 
 #l2-main {
   min-height:80vh;
-  padding-top:60px;
+  padding-top:80px;
+  margin-bottom:120px;
   color:$wb-text;
-  h1 {
+  h1, h2, h3, p {
     font-family:$headline-font;
     color:darken($wb-text, 40%);
+  }
+  h3 {
+    color:darken($wb-text, 25%);
+  }
+  .address {
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid rgba(0,0,0, .1);
   }
 
 }
