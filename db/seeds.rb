@@ -14,3 +14,6 @@ Refinery::Categories::Engine.load_seed
 
 # Added by Refinery CMS Projects extension
 Refinery::Projects::Engine.load_seed
+
+# Added by Refinery CMS Inquiries engine
+Refinery::Inquiries::Engine.load_seed
