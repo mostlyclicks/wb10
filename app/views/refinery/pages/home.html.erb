@@ -1,59 +1,34 @@
 <%#= render '/refinery/content_page' %>
 
-<!-- <div id="home-main">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="col-md-4" id="overlay">
-          <h1>100 Harbour View</h1>
-          <p>Once the offices of Heilemen's, First Logic and Business Objects Wieser help convert this building into multi-use spaces including offices and the Four Sisters restaurant.
-            <h4><i class="fa fa-chevron-right"></i> Learn more</h4>
-          </p>
-        </div>
-        <%#= image_tag 'harbour-view.jpg', class: 'img-responsive'  %>
+
+<div id="carousel-example-generic" class="carousel carousel-fade slide" data-ride="carousel">
+  <!-- Indicators -->
+  
+  <ol class="carousel-indicators">
+    <% @page.images.each_with_index do |image, index| %>
+    <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<% if index == 0 %>active<% end %>"></li>
+    <% end %>
+    <!-- <li data-target="#carousel-example-generic" data-slide-to="1"></li> -->
+    <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <% @page.images.each_with_index do |image, index| %>
+      <div class="item <% if index == 0 %>active<% end %>">
+        <div class="main-image" style="background-image:url(<%= image.url %>);"></div>
       </div>
-    </div>
+    <% end %>
   </div>
-</div> -->
 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
 
-<!-- <div id="main-image" style="background-image:url('/assets/c-RS-Main-Exterior.jpg');"> -->
-
-
-
-
-
-
-
-  <div id="carousel-example-generic" class="carousel carousel-fade slide" data-ride="carousel">
-    <!-- Indicators -->
-    
-    <ol class="carousel-indicators">
-      <% @page.images.each_with_index do |image, index| %>
-      <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<% if index == 0 %>active<% end %>"></li>
-      <% end %>
-      <!-- <li data-target="#carousel-example-generic" data-slide-to="1"></li> -->
-      <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <% @page.images.each_with_index do |image, index| %>
-        <div class="item <% if index == 0 %>active<% end %>">
-          <div class="main-image" style="background-image:url(<%= image.url %>);"></div>
-        </div>
-      <% end %>
-    </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  
-  
 </div>
 
 

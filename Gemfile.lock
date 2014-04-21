@@ -3,6 +3,8 @@ PATH
   specs:
     refinerycms-categories (1.0)
       refinerycms-core (~> 2.1.1)
+    refinerycms-projects (1.0)
+      refinerycms-core (~> 2.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -223,5 +225,6 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 1.0.0)
   refinerycms-categories!
   refinerycms-page-images (~> 2.1.0)
+  refinerycms-projects!
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

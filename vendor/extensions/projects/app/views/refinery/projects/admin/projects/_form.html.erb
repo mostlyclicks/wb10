@@ -1,0 +1,58 @@
+<%= form_for [refinery, :projects_admin, @project] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @project,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :project_status -%>
+    <%= f.text_field :project_status -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :pdf_link -%>
+    <%= render '/refinery/admin/resource_picker',
+               :f => f,
+               :field => :pdf_link_id,
+               :resource => @project.pdf_link -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :hero_image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :hero_image_id,
+               :image => @project.hero_image,
+               :toggle_image_display => false -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:excerpt, :description, :testimonial],
+                :object => "projects/project" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :category_id -%>
+    <%#= f.number_field :category_id -%>
+    <%= f.select(:category_id, @categories.collect { |cat| [cat.name, cat.id] } ) %>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.projects.admin.projects.project'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @project.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

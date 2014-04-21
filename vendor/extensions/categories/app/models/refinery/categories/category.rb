@@ -10,6 +10,7 @@ module Refinery
       validates :name, :presence => true, :uniqueness => true
 
       belongs_to :cat_hero_image, :class_name => '::Refinery::Image'
+      has_many :projects
     end
   end
 end
