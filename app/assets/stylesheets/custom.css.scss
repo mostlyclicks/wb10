@@ -25,7 +25,7 @@ p, li {
   color:$white;
   padding:5px;
   a {
-    color:$wb-orange;
+    color:$wb-text;
   }
 }
 
@@ -165,10 +165,10 @@ p, li {
   #trust {
     
     border-top:2px solid darken($white, 2%);
-    color:darken($wb-orange, 20%);
+    color:darken($wb-text, 20%);
     h3 {
       
-      color:darken($wb-orange, 30%);
+      color:darken($wb-text, 30%);
       font-size:48px;
       line-height: 1.10em;
     }
@@ -208,6 +208,11 @@ p, li {
 #l2-main {
   min-height:80vh;
   padding-top:60px;
+  color:$wb-text;
+  h1 {
+    font-family:$headline-font;
+    color:darken($wb-text, 40%);
+  }
 
 }
 

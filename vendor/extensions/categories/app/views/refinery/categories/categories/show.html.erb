@@ -1,0 +1,53 @@
+<% content_for :body_content_title do %>
+  <%= @category.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @category.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Short Desc</h1>
+    <p>
+      <%=raw @category.short_desc %>
+    </p>
+  </section>
+  <section>
+    <h1>Long Desc</h1>
+    <p>
+      <%=raw @category.long_desc %>
+    </p>
+  </section>
+  <section>
+    <h1>Cat Hero Image</h1>
+    <p>
+      <%= image_fu @category.cat_hero_image, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="categories">
+      <% @categories.each do |category| %>
+        <li>
+          <%= link_to category.name, refinery.categories_category_path(category) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<div class="container" id="l2-main">
+<%#= render '/refinery/content_page' %>
+  <div class="row">
+    <div class="col-md-8">
+      <h1><%= @category.name  %></h1>
+
+    </div>
+  </div>
+</div>

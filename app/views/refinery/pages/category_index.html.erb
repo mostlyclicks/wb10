@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col-md-12">
         <% @categories.each do |cat| %>
+          <%#= link_to cat.name, refinery.categories_categories_path(cat) %>
           <%= cat.name %>
         <% end %>
       </div>

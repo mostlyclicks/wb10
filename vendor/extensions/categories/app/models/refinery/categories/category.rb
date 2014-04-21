@@ -1,6 +1,8 @@
 module Refinery
   module Categories
     class Category < Refinery::Core::BaseModel
+      extend FriendlyId
+      friendly_id :name, :use => [:slugged]
       self.table_name = 'refinery_categories'
 
       attr_accessible :name, :short_desc, :long_desc, :cat_hero_image_id, :position
