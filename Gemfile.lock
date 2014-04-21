@@ -5,6 +5,7 @@ PATH
       refinerycms-core (~> 2.1.1)
     refinerycms-projects (1.0)
       refinerycms-core (~> 2.1.1)
+      refinerycms-page-images
 
 GEM
   remote: https://rubygems.org/

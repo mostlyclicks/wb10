@@ -12,6 +12,7 @@ module Refinery
       belongs_to :pdf_link, :class_name => '::Refinery::Resource'
 
       belongs_to :category
+      has_many_page_images
     end
   end
 end

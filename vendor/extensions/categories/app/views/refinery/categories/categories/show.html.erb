@@ -50,6 +50,9 @@
       
       <% @cat_projects.each do |p| %>
         <h1><%= p.title %> - <%= p.category_id %></h1>
+        <% p.images.each do |i| %>
+          <%= link_to image_tag(i.thumbnail("64x64#c").url), i.thumbnail("900x600").url %>
+        <% end %>
       <% end %>
 
 
