@@ -52,9 +52,9 @@
      <%#= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
     <!--</div> /.navbar-collapse -->
     <!-- see /refinery/headers for options for headers above xs -->
-<div class="hidden-xs"><%= render "/refinery/header_nobg" -%></div>
+<div class="hidden-sm hidden-xs"><%= render "/refinery/header_nobg" -%></div>
 <!-- default xs nav -->
-<div class="visible-xs"><%= render "/refinery/header_fixed_top" -%></div>
+<div class="visible-sm visible-xs"><%= render "/refinery/header_fixed_top" -%></div>
     <%#= main_nav_nobg.to_html %>
   </div><!-- /.container-fluid -->
 </nav>
