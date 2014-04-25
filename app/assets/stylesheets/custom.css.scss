@@ -17,6 +17,7 @@ h1 {
 }
 p, li {
   color:$wb-txt-color;
+  font-family:$main-font;
 }
 
 #pre-header {
@@ -211,12 +212,15 @@ p, li {
   padding-top:80px;
   margin-bottom:120px;
   color:$wb-text;
-  h1, h2, h3, p {
+  h1, h2, h3 {
     font-family:$headline-font;
     color:darken($wb-text, 40%);
   }
   h3 {
     color:darken($wb-text, 25%);
+  }
+  p {
+    font-family:$main-font;
   }
   .address {
     margin-top:20px;
