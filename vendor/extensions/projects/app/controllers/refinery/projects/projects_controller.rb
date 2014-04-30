@@ -10,6 +10,7 @@ module Refinery
         # by swapping @page for @project in the line below:
         present(@page)
         @categories = Refinery::Categories::Category.all
+        # @cat_projects = Project.
       end
 
       def show
