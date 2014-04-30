@@ -93,16 +93,19 @@
           <div class="col-md-6">
             <%= image_fu @project.hero_image, '1200x600#c', class: 'img-responsive' %>
             <div class="row" style="margin-left:0px;margin-top:15px;">
-
               <% @project.images.each do |i| %>
-              <div class="col-md-2" style="padding-left:0;">
-                <%= image_fu i, '100x100#c', class: 'img-responsive' %>
-              </div>
-                <%#= image_tag i.url, class: 'img-responsive' %>
+                <div class="col-md-2" style="padding-left:0;">
+                  <%= image_fu i, '100x100#c', class: 'img-responsive' %>
+                </div>
               <% end %>
-
-
             </div>
+            <% if @project.pdf_link.present? %>
+              <div class="row">
+                <div class="col-md-12" style="padding:20px 15px;">
+                  <%= link_to 'Download Project PDF', @project.pdf_link.url, class: 'btn btn-primary' %>
+                </div>
+              </div>
+            <% end %>
             
             <div class="address">
               <p>200 Twilite Street<br />
