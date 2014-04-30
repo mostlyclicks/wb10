@@ -28,7 +28,8 @@
   <section>
     <h1>Hero Image</h1>
     <p>
-      <%= image_fu @project.hero_image, nil %>
+      <%= image_fu @project.hero_image, '1200x600c' %>
+      <%#= image_tag @project.hero_image.url %>
     </p>
   </section>
   <section>
@@ -70,4 +71,54 @@
   </aside>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+<%#= render '/refinery/content_page' %>
+
+<div class="container-fluid" id="l2-main">
+  <div class="row">
+    <div class="col-md-12">
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1><%= raw @project.title %></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            
+            <%= raw @project.description %>
+          <%#= render '/refinery/content_page' %>
+          </div>
+          <div class="col-md-6">
+            <%= image_fu @project.hero_image, '1200x600#c', class: 'img-responsive' %>
+            <div class="row" style="margin-left:0px;margin-top:15px;">
+
+              <% @project.images.each do |i| %>
+              <div class="col-md-2" style="padding-left:0;">
+                <%= image_fu i, '100x100#c', class: 'img-responsive' %>
+              </div>
+                <%#= image_tag i.url, class: 'img-responsive' %>
+              <% end %>
+
+
+            </div>
+            
+            <div class="address">
+              <p>200 Twilite Street<br />
+                La Crescent, MN 55947<br />
+                507-895-8903<br />
+                Fax 507-895-8438<br />
+                info@wieserbrothers.com</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<%= render '/refinery/buckets' %>
