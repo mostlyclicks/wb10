@@ -90,29 +90,26 @@
             <%= raw @project.description %>
           <%#= render '/refinery/content_page' %>
           </div>
-          <div class="col-md-6" id="links">
+          <div class="col-md-6">
 
-<!--             <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-              <div class="slides"></div>
-              <h3 class="title"></h3>
-              <a class="prev">‹</a>
-              <a class="next">›</a>
-              <a class="close">×</a>
-              <a class="play-pause"></a>
-              <ol class="indicator"></ol>
-            </div> -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
 
 
 
             <%= image_fu @project.hero_image, '1200x600#c', class: 'img-responsive' %>
-            <div class="row" style="margin-left:0px;margin-top:15px;" id="project-gallery-show">
+            <div class="row" style="margin-left:0px;margin-top:15px;" id="links">
               
               <% @project.images.each do |i| %>
                 <div class="col-md-2" style="padding-left:0;">
-                    <%= image_fu i, '100x100#c', class: 'img-responsive' %>
-                    <%#= link_to (image_fu i, '100x100#c', class: 'img-responsive'), (image_fu i, '1200x600#c') %>
-                    <%#= link_to image_tag(i.thumbnail('100x100#c').url), i.thumbnail("900x600").url, "data-gallery" %>
-                  
+                  <%= link_to image_tag(i.thumbnail('100x100#c').url, class: 'img-responsive'), i.thumbnail('900x600#c').url %>
                 </div>
               <% end %>
               
@@ -139,6 +136,8 @@
     </div>
   </div>
 </div>
+
+<script src="/assets/javascripts/blueimp-gallery.min.js"></script>
 
   <script>
   document.getElementById('links').onclick = function (event) {
