@@ -1,6 +1,8 @@
 module Refinery
   module Projects
     class Project < Refinery::Core::BaseModel
+      extend FriendlyId
+      friendly_id :title, :use => [:slugged]
       self.table_name = 'refinery_projects'
 
       attr_accessible :title, :project_status, :pdf_link_id, :hero_image_id, :excerpt, :description, :testimonial, :category_id, :position
