@@ -32,28 +32,20 @@
             <%#= @page.content_for(:body).html_safe %>
             <div class="row">
               <% @categories.each do |c| %>
-              <% if c.projects.present? %>
-                <div class="col-md-3 col-xs-6 projects text-center">
-                  
-                  <!-- Get sample project from category -->
-                  <% sample_proj = c.projects.sample %>
-                  <!-- Show sample image -->
-                  <%= image_fu sample_proj.hero_image, '120x120#c' %>
-                  
-
-
-
-                  <p><%= link_to c.name, refinery.categories_category_path(c) %></p>
-                </div>
-
+                <% if c.projects.present? %>
+                  <div class="col-md-3 col-xs-6 projects text-center">
+                    <!-- Get sample project from category -->
+                    <% sample_proj = c.projects.sample %>
+                    <!-- Show sample image -->
+                    <%= image_fu sample_proj.hero_image, '120x120#c' %>
+                    <p><%= link_to c.name, refinery.categories_category_path(c) %></p>
+                  </div>
+                <% end %>
               <% end %>
-              <% end %>
-
             </div>
             
               
             
-          <%#= render '/refinery/content_page' %>
           </div>
           <div class="col-md-6">
             <% @page.images.each do |i| %>

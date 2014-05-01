@@ -42,22 +42,48 @@
   </aside>
 <% end %>
 
+
+
 <div class="container" id="l2-main">
 <%#= render '/refinery/content_page' %>
   <div class="row">
-    <div class="col-md-8">
-      <h1><%= @category.name  %> - <%= @category.id %></h1>
-      
-      <% @cat_projects.each do |p| %>
-        <h1><%= p.title %> - <%= p.category_id %></h1>
-        <% p.images.each do |i| %>
-          <%= link_to image_tag(i.thumbnail("64x64#c").url), i.thumbnail("900x600").url %>
-        <% end %>
-      <% end %>
-
-
+    <div class="col-md-12">
+      <h1><%= @category.name %></h1>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <% @category.projects.each do |proj| %>
+          <div class="col-md-3 col-xs-6 projects text-center">
+            <%= image_fu proj.hero_image, '120x120#c' %>
+            <p><%= link_to proj.title, refinery.projects_project_path(proj) %></p>
+          </div>
+        <% end %>
+      </div>
+      
+       
+      
+    </div>
+    <div class="col-md-6">
+      <% sample_proj = @category.projects.sample %>
+      <%= image_tag sample_proj.hero_image.url, class: 'img-responsive' %>
+      <div class="address">
+              <p>200 Twilite Street<br />
+                La Crescent, MN 55947<br />
+                507-895-8903<br />
+                Fax 507-895-8438<br />
+                info@wieserbrothers.com</p>
+            </div>
+    </div>
+  </div>
+
+
+      
+
+
+
 </div>
+
 
 <%= render '/refinery/buckets' %>
