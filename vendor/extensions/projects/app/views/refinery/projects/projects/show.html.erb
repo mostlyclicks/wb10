@@ -92,7 +92,7 @@
           </div>
           <div class="col-md-6">
 
-<div id="blueimp-gallery" class="blueimp-gallery">
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
     <div class="slides"></div>
     <h3 class="title"></h3>
     <a class="prev">‹</a>
@@ -139,16 +139,16 @@
 
 <script src="/assets/javascripts/blueimp-gallery.min.js"></script>
 
-  <script>
-  document.getElementById('links').onclick = function (event) {
-      event = event || window.event;
-      var target = event.target || event.srcElement,
-          link = target.src ? target.parentNode : target,
-          options = {index: link, event: event},
-          links = this.getElementsByTagName('a');
-      blueimp.Gallery(links, options);
-  };
-  </script>
+<script>
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
 
 
 
