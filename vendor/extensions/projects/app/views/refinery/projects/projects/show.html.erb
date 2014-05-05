@@ -109,7 +109,7 @@
               
               <% @project.images.each do |i| %>
                 <div class="col-md-2" style="padding-left:0;">
-                  <%= link_to image_tag(i.thumbnail('100x100#c').url, class: 'img-responsive'), i.thumbnail('900x600#c').url %>
+                  <%= link_to image_tag(i.thumbnail('100x100#c').url, class: 'img-responsive'), i.thumbnail('900x600').url %>
                 </div>
               <% end %>
               
