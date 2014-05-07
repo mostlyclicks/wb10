@@ -12,16 +12,14 @@
       <div class="field form-group">
         <%= f.required_label :name, :class => 'col-md-2 control-label placeholder-fallback' %><!--   -->
         <div class="col-md-6">
-        <%= f.text_field :name, :class => 'text form-control', :required => 'required', #text
-          :placeholder => t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+        <%= f.text_field :name, :class => 'text form-control', :required => 'required' %>
         </div>
       </div>
 
       <div class="field form-group">
         <%= f.required_label :email, :class => 'placeholder-fallback col-md-2 control-label' %>
         <div class="col-md-6">
-        <%= f.email_field :email, :class => 'text email form-control', :required => 'required',
-          :placeholder => t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+        <%= f.email_field :email, :class => 'text email form-control', :required => 'required' %>
         </div>
       </div>
 
@@ -29,8 +27,7 @@
         <div class="field form-group">
           <%= f.label :phone, :class => 'placeholder-fallback col-md-2 control-label' %>
           <div class="col-md-6">
-          <%= f.text_field :phone, :class => 'text phone form-control',
-            :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+          <%= f.text_field :phone, :class => 'text phone form-control' %>
           </div>
         </div>
       <% end %>
@@ -38,8 +35,7 @@
       <div class='field message_field form-group'>
         <%= f.required_label :message, :class => 'placeholder-fallback col-md-2 control-label' %>
         <div class="col-md-7">
-        <%= f.text_area :message, :rows => 8, :required => 'required', :class => 'form-control',
-          :placeholder => t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+        <%= f.text_area :message, :rows => 8, :required => 'required', :class => 'form-control' %>
         </div>
       </div>
       

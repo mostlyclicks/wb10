@@ -67,9 +67,6 @@ module Wb10
 
     config.assets.initialize_on_precompile = false
 
-    # config.to_prepare do
-    #     Refinery.searchable_models = [Refinery::Page, Refinery::Projects::Project, Refinery::News::Item]
-    # end
     config.to_prepare do
         Refinery.searchable_models = [Refinery::Page, Refinery::Projects::Project, Refinery::News::Item, Refinery::Categories::Category]  
     end

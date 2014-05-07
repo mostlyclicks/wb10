@@ -6,7 +6,7 @@ Refinery::Inquiries.configure do |config|
   # config.show_phone_number_field = true
 
   # Configure whether to show form field placeholders
-  # config.show_placeholders = true
+  # config.show_placeholders = false
 
   # Configure whether inquiries marked as spam should also send a notification mail
   # config.send_notifications_for_inquiries_marked_as_spam = false
