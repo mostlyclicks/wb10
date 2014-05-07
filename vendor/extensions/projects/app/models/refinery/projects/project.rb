@@ -15,6 +15,8 @@ module Refinery
 
       belongs_to :category, :class_name => Refinery::Categories::Category
       has_many_page_images
+
+      acts_as_indexed :fields => [:title, :description]
     end
   end
 end

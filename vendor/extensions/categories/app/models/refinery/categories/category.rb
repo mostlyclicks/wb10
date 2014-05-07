@@ -9,8 +9,12 @@ module Refinery
 
       validates :name, :presence => true, :uniqueness => true
 
+      alias_attribute :title, :name
+      acts_as_indexed :fields => [:title]
+
       belongs_to :cat_hero_image, :class_name => '::Refinery::Image'
       has_many :projects, :class_name => Refinery::Projects::Project
+
     end
   end
 end
