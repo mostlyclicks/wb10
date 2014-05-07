@@ -1,7 +1,7 @@
 <%= form_tag refinery.search_path, class: 'form-inline' do -%>
 <div class="form-group">
   <%= text_field_tag :query, {}, {:type => "search",
-                     :placeholder => "Search site for...",
+                     :placeholder => "Search",
                      :class => 'form-control',
                      :value => (params[:query] if params[:query])} %>
 </div>
