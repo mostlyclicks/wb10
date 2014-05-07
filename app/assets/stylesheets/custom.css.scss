@@ -242,6 +242,29 @@ p, li {
   color:darken($wb-text, 40%) !important;
 }
 
+.news {
+  img {
+    border:5px solid rgba(0,0,0,.2);
+    margin:20px 0 20px 0;
+  }
+}
+
+#recent_news_items {
+  ul {
+    margin-left:0;
+    padding-left:0;
+    margin-top:2em;
+
+  }
+  li {
+    list-style:none;
+    padding:1em 0;
+    border-top:1px dotted rgba(0,0,0,.1);
+
+  }
+
+}
+
 
 
 footer {
