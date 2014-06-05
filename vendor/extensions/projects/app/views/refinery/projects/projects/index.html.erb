@@ -51,13 +51,7 @@
             <% @page.images.each do |i| %>
               <%= image_tag i.url, class: 'img-responsive' %>
             <% end %>
-            <div class="address">
-              <p>200 Twilite Street<br />
-                La Crescent, MN 55947<br />
-                507-895-8903<br />
-                Fax 507-895-8438<br />
-                info@wieserbrothers.com</p>
-            </div>
+            <%= render '/refinery/address' %>
         
           </div>
         </div>

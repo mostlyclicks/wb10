@@ -68,13 +68,7 @@
     <div class="col-md-6">
       <% sample_proj = @category.projects.sample %>
       <%= image_tag sample_proj.hero_image.url, class: 'img-responsive' %>
-      <div class="address">
-              <p>200 Twilite Street<br />
-                La Crescent, MN 55947<br />
-                507-895-8903<br />
-                Fax 507-895-8438<br />
-                info@wieserbrothers.com</p>
-            </div>
+      <%= render '/refinery/address' %>
     </div>
   </div>
 
