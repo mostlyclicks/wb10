@@ -243,7 +243,11 @@ p, li {
 
 .projects {
   min-height:200px;
-  font-size:12px;
+  font-size:14px;
+  a {
+    font-family: $headline-font;
+    color:$wb-green;
+  }
   a img {
     margin-bottom:10px;
     &:hover {opacity:.8;}
