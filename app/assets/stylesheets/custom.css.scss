@@ -244,9 +244,11 @@ p, li {
 .projects {
   min-height:200px;
   font-size:12px;
-  img {
+  a img {
     margin-bottom:10px;
+    &:hover {opacity:.8;}
   }
+
 }
 
 .inquiries label {

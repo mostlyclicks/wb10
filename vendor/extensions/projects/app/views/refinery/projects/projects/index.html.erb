@@ -37,7 +37,7 @@
                     <!-- Get sample project from category -->
                     <% sample_proj = c.projects.sample %>
                     <!-- Show sample image -->
-                    <%= image_fu sample_proj.hero_image, '120x120#c' %>
+                    <%= link_to (image_fu sample_proj.hero_image, '120x120#c') refinery.categories_category_path(c) %>
                     <p><%= link_to c.name, refinery.categories_category_path(c) %></p>
                   </div>
                 <% end %>
