@@ -66,6 +66,9 @@ p, li {
 
 .navbg .nav {
   // position:absolute;
+  li.active {
+    background-color:rgba(5,42,9, 1);
+  }
   
 }
 
