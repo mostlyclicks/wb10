@@ -23,7 +23,7 @@ module ApplicationHelper
     sub_menu_items = Refinery::Menu.new(refinery_menu_pages.select{ |item| item.parent_id == @page.root.id })
     # style = page_style(@page)
     presenter = Refinery::Pages::MenuPresenter.new(sub_menu_items, self)
-    presenter.menu_tag = "div class=\"collapse navbar-collapse navbar-right\" id=\"sub-nav-collapse\""
+    presenter.menu_tag = "div class=\"collapse navbar-collapse \" id=\"sub-nav-collapse\""
     # presenter.css = "#{style}"
     presenter.list_tag = "ul class=\"nav nav-pills  \""
     # presenter.list_tag_css = "nav nav-pills nav-stacked"

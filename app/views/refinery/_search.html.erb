@@ -1,22 +1,23 @@
 <div class="row">
-  <div class="col-xs-8 col-sm-10 col-md-10 text-right">
+  <div class="col-xs-8 col-sm-10 col-md-12 text-right">
 
       <%= form_tag refinery.search_path, class: 'form-inline' do -%>
         <div class="form-group">
           <%= text_field_tag :query, {}, {:type => "search",
                              :placeholder => "Search",
                              :class => 'form-control input-sm',
-                             :style => 'padding-top:0;',
+                             :style => 'padding-top:5px;',
                              :value => (params[:query] if params[:query])} %>
         </div>
-  </div>
-  <div class="col-xs-2 col-sm-2 col-md-2">
-
-
-      <%= submit_tag 'Go', class: 'btn btn-default input-sm' %>
+        <%= submit_tag 'Go', class: 'btn btn-default input-sm search-btn' %>
       <% end %>
-
   </div>
+<!--   <div class="col-xs-2 col-sm-2 col-md-2">
+
+
+      
+
+  </div> -->
 </div>
 
 
