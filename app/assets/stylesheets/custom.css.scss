@@ -175,6 +175,14 @@ p, li {
 
 }
 
+#sidebar {
+  blockquote {
+    color:rgba(0,0,0,.4);
+    font-family: Times, serif;
+    font-style: italic;
+    font-size:24px;
+  }
+}
 #buckets {
   margin-top:-60px;
   background-image:url('smooth_wall.png');
@@ -224,6 +232,7 @@ p, li {
     border-left:none;
     font-weight:200;
     font-size:20px;
+
 
     small {
       margin-top:1em;
