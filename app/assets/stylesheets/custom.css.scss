@@ -252,6 +252,20 @@ p, li {
 
 }
 
+#mission-statement {
+  background-color:$wb-green;
+  padding:60px 0 80px 0;
+  
+  h2 {
+    font-family: $headline-font;
+    color:lighten($wb-green, 12%);
+  }
+  p {
+    color:rgba(255,255,255,.5);
+    font-size:18px;
+  }
+}
+
 #l2-main {
   min-height:80vh;
   padding-top:80px;
