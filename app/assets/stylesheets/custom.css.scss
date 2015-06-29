@@ -177,6 +177,9 @@ p, li {
 
 #sidebar {
   blockquote {
+    background-color:rgba(200,200,200,.1);
+    padding:30px;
+    margin-top:20px;
     color:rgba(0,0,0,.4);
     font-family: Times, serif;
     font-style: italic;
@@ -234,6 +237,7 @@ p, li {
     font-weight: bold;
   }
   blockquote {
+
     border-left:none;
     font-weight:200;
     font-size:20px;
