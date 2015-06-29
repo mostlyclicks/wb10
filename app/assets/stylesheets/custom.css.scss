@@ -180,9 +180,14 @@ p, li {
     color:rgba(0,0,0,.4);
     font-family: Times, serif;
     font-style: italic;
-    font-size:24px;
+    font-size:20px;
+    border-left:none;
+    small {
+      color:rgba(0,0,0,.6);
+    }
   }
 }
+
 #buckets {
   margin-top:-60px;
   background-image:url('smooth_wall.png');

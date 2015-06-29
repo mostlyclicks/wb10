@@ -6,6 +6,8 @@ PATH
     refinerycms-projects (1.0)
       refinerycms-core (~> 2.1.1)
       refinerycms-page-images
+    refinerycms-testimonials (1.0)
+      refinerycms-core (~> 2.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -244,5 +246,9 @@ DEPENDENCIES
   refinerycms-page-images (~> 2.1.0)
   refinerycms-projects!
   refinerycms-search (~> 2.1.0)
+  refinerycms-testimonials!
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
+
+BUNDLED WITH
+   1.10.5

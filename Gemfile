@@ -54,3 +54,4 @@ gem "refinerycms-news", '~> 2.1.0'
 
 gem 'refinerycms-categories', :path => 'vendor/extensions'
 gem 'refinerycms-projects', :path => 'vendor/extensions'
+gem 'refinerycms-testimonials', :path => 'vendor/extensions'

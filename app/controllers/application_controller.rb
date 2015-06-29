@@ -9,13 +9,14 @@ class ApplicationController < ActionController::Base
     end
 
     def get_testimonials
-      @projects_all = Refinery::Projects::Project.all
-      @testimonials = []
-      @projects_all.each do |t|
-        if t.testimonial?
-          @testimonials << t
-        end
-      end
+      # @projects_all = Refinery::Projects::Project.all
+      # @testimonials = []
+      # @projects_all.each do |t|
+      #   if t.testimonial?
+      #     @testimonials << t
+      #   end
+      # end
+      @testimonials = Refinery::Testimonials::Testimonial.all
       @testimonial_sample = @testimonials.sample
     end
 
