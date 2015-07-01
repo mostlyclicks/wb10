@@ -36,9 +36,15 @@ p, li {
 
 }
 
+#pre-mobile {
+  margin-top:40px;
+  span {display:block;margin:20px 0px;}
+}
+
 #top {
   background-color:$wb-green;
   height:110px;
+  margin-top:20px;
   img {
     padding:0 10px;
     margin-top:5px;

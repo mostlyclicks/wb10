@@ -1,19 +1,45 @@
-<div id="pre-header">
+<div id="pre-header" class="hidden-xs hidden-sm">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-       <span> 507-895-8903 | <%= link_to 'Contact Us', '/contact' %></span>
+       <span> 507-895-8903 | <%= link_to 'Contact Us', '/contact' %> | 
+        <%= link_to 'Submit Bids', 'mailto:bids@wieserbrothers.com' %> | 
+        <%= link_to 'Info', 'mailto:info@wieserbrothers.com' %>
+       </span>
       </div>
     </div>
   </div>
 </div>
+
+<section id="pre-mobile" class="visible-xs visible-sm hidden-md hidden-lg">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <span> 507-895-8903 | 
+        <%= link_to 'Contact Us', '/contact' %> | 
+        <%= link_to 'Submit Bids', 'mailto:bids@wieserbrothers.com' %> | 
+        <%= link_to 'Info', 'mailto:info@wieserbrothers.com' %>
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+
+       <%= render '/refinery/search' %>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
 <div id="top">
   <div class="container">
     <div class="row">
       <div class="col-md-4">
         <%= image_tag 'logo.png', class: 'img-responsive', style: 'height:98px;' %>
       </div>
-      <div class="col-md-8 hidden-xs hidden-sm" id="nav-side" style="">
+      <div class="col-md-8 hidden-xs hidden-sm" id="nav-side">
 
         <%= render '/refinery/search' %>
         

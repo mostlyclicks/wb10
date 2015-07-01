@@ -13,6 +13,7 @@
     text-align: right;
   }
   #top {
+    margin-top:40px;
     #nav-side {
     padding-top:110px;
   }
@@ -22,6 +23,9 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  #top {
+    margin-top:0px;
+  }
   // body {
   //   border:3px solid blue;
   // }
