@@ -84,6 +84,7 @@ p, li {
 }
 
 .navbg .nav {
+  -webkit-transform: translateZ(0px);
   // position:absolute;
   li.active {
     background-color:rgba(5,42,9, 1);
@@ -93,6 +94,21 @@ p, li {
     background-color:$wb-green;
   }
   
+}
+
+#welcome {
+  position:absolute;
+  font-family: $main-font;
+  background-color:rgba(0,0,0,.4);
+  left:10%;
+  top:200px;
+  padding:15px 20px 20px 20px;
+  color:rgba(255,255,255,.7);
+  font-weight: 100;
+  -webkit-transform: translateZ(0px);
+  p {
+    color:#fff;
+  }
 }
 
 .main-image {
