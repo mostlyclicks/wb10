@@ -104,11 +104,11 @@ p, li {
   left:10%;
   top:200px;
   padding:15px 20px 20px 20px;
-  color:rgba(255,255,255,.7);
+  color:rgba(255,255,255,1);
   font-weight: 100;
   -webkit-transform: translateZ(0px);
   p {
-    color:#fff;
+    color:rgba(255,255,255,.7);
   }
 }
 
