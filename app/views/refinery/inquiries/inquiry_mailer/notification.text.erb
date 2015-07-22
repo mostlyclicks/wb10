@@ -4,22 +4,23 @@
 
 <%=raw t('.inquiry_starts') %>
 
-Contact information:
-<%=raw t('.from') %>: <%= @inquiry.name %>
-<%=raw t('.email') %>: <%= @inquiry.email %>
-<%=raw t('.phone') %>: <%= @inquiry.phone %>
-Business Name: <%= @inquiry.business_name %>
-Address (line 1): <%= @inquiry.address_1 %>
-Address (line 2): <%= @inquiry.address_2 %>
-City: <%= @inquiry.city %>
-State: <%= @inquiry.state %>
-Zip: <%= @inquiry.zip %>
-FAX: <%= @inquiry.fax %>
+Contact information:<%= "\r\n" %>
+<%=raw t('.from') %>: <%= @inquiry.name %><%= "\r\n" %>
+<%=raw t('.email') %>: <%= @inquiry.email %><%= "\r\n" %>
+<%=raw t('.phone') %>: <%= @inquiry.phone %><%= "\r\n" %>
 
-Project information:
-Project Date: <%= @inquiry.project_date %>
-Project Type: <%= @inquiry.project_type %>
-Project Type Other: <%= @inquiry.other_project_type %>
+Business Name: <%= @inquiry.business_name %><%= "\r\n" %>
+Address (line 1): <%= @inquiry.address_1 %><%= "\r\n" %>
+Address (line 2): <%= @inquiry.address_2 %><%= "\r\n" %>
+City: <%= @inquiry.city %><%= "\r\n" %>
+State: <%= @inquiry.state %><%= "\r\n" %>
+Zip: <%= @inquiry.zip %><%= "\r\n" %>
+FAX: <%= @inquiry.fax %><%= "\r\n" %>
+
+Project information:<%= "\r\n" %>
+Project Date: <%= @inquiry.project_date %><%= "\r\n" %>
+Project Type: <%= @inquiry.project_type %><%= "\r\n" %>
+Project Type Other: <%= @inquiry.other_project_type %><%= "\r\n" %>
 
 <%=raw t('.message') %>:
 <%=raw strip_tags(@inquiry.message) %>
