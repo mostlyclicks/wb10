@@ -1,0 +1,180 @@
+<div id='actions'>
+  <h2><%= t('.details')%></h2>
+  <p>
+    <strong><%= t('.age') %>:</strong> <%= time_ago_in_words(@inquiry.created_at) %>
+  </p>
+  <% if @inquiry.spam? %>
+    <p>
+      <strong><%= t('.spam') %>:</strong> <%= t('.spam_yes') %>
+    </p>
+  <% end %>
+  <h2><%= t('.actions') %></h2>
+  <ul>
+    <li>
+      <%= link_to t('.back_to_all_inquiries'),
+                  refinery.inquiries_admin_inquiries_path,
+                  :class => "back_icon" %>
+    </li>
+    <li>
+      <%= link_to t('refinery.inquiries.admin.inquiries.delete'),
+                  refinery.inquiries_admin_inquiry_path(@inquiry),
+                  :class => 'delete_icon no-tooltip confirm-delete',
+                  :title => t('refinery.inquiries.admin.inquiries.delete'),
+                  :data => {
+                    :confirm => t('refinery.admin.delete.message', :title => @inquiry.name)
+                  },
+                  :method => :delete %>
+    </li>
+  </ul>
+</div>
+<div id='records'>
+  <h2><%= t('.inquiry') %></h2>
+  <table id='inquiry'>
+    <tr>
+      <td>
+        <strong><%= t('.to') %></strong>
+      </td>
+      <td>
+        <%= Refinery::Core.config.site_name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong><%= t('.from') %></strong>
+      </td>
+      <td>
+        <%= @inquiry.name %> [<%= mail_to @inquiry.email, @inquiry.email, {:title => t('.click_to_email')} %>]
+      </td>
+    </tr>
+    <% unless @inquiry.phone.blank? %>
+      <tr>
+        <td>
+          <strong><%= t('.phone') %></strong>
+        </td>
+        <td>
+          <%= @inquiry.phone %>
+        </td>
+      </tr>
+    <% end %>
+
+    <% unless @inquiry.business_name.blank? %>
+      <tr>
+        <td>
+          <strong>Business Name</strong>
+        </td>
+        <td>
+          <%= @inquiry.business_name %>
+        </td>
+      </tr>
+    <% end %>
+
+    <% unless @inquiry.address_1.blank? %>
+      <tr>
+        <td>
+          <strong>Address (line 1)</strong>
+        </td>
+        <td>
+          <%= @inquiry.address_1 %>
+        </td>
+      </tr>
+    <% end %>
+
+    <% unless @inquiry.address_2.blank? %>
+      <tr>
+        <td>
+          <strong>Address (line 2)</strong>
+        </td>
+        <td>
+          <%= @inquiry.address_2 %>
+        </td>
+      </tr>
+    <% end %>   
+
+    <% unless @inquiry.city.blank? %>
+      <tr>
+        <td>
+          <strong>City</strong>
+        </td>
+        <td>
+          <%= @inquiry.city %>
+        </td>
+      </tr>
+    <% end %> 
+
+    <% unless @inquiry.state.blank? %>
+      <tr>
+        <td>
+          <strong>State</strong>
+        </td>
+        <td>
+          <%= @inquiry.state %>
+        </td>
+      </tr>
+    <% end %> 
+
+    <% unless @inquiry.zip.blank? %>
+      <tr>
+        <td>
+          <strong>Zip</strong>
+        </td>
+        <td>
+          <%= @inquiry.zip %>
+        </td>
+      </tr>
+    <% end %> 
+
+    <% unless @inquiry.fax.blank? %>
+      <tr>
+        <td>
+          <strong>FAX</strong>
+        </td>
+        <td>
+          <%= @inquiry.fax %>
+        </td>
+      </tr>
+    <% end %> 
+
+    <% unless @inquiry.project_date.blank? %>
+      <tr>
+        <td>
+          <strong>Project Date</strong>
+        </td>
+        <td>
+          <%= @inquiry.project_date %>
+        </td>
+      </tr>
+    <% end %> 
+
+    <% unless @inquiry.project_type.blank? %>
+      <tr>
+        <td>
+          <strong>Project Type</strong>
+        </td>
+        <td>
+          <%= @inquiry.project_type %>
+          <% unless @inquiry.other_project_type.blank? %>
+            <%= @inquiry.other_project_type %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %> 
+
+
+    <tr>
+      <td>
+        <strong><%= t('.date') %></strong>
+      </td>
+      <td>
+        <%= l(Date.parse(@inquiry.created_at.to_s), :format => :long) %>
+      </td>
+    </tr>
+    <tr>
+      <td valign='top'>
+        <strong><%= t('.message') %></strong>
+      </td>
+      <td>
+        <%= simple_format strip_tags(@inquiry.message), :style => 'margin-top: 0' %>
+      </td>
+    </tr>
+  </table>
+</div>

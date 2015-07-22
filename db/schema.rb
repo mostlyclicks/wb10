@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150629190203) do
+ActiveRecord::Schema.define(:version => 20150720183705) do
 
   create_table "refinery_categories", :force => true do |t|
     t.string   "name"
@@ -64,9 +64,19 @@ ActiveRecord::Schema.define(:version => 20150629190203) do
     t.string   "email"
     t.string   "phone"
     t.text     "message"
-    t.boolean  "spam",       :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "spam",               :default => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
+    t.string   "business_name"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "fax"
+    t.string   "project_date"
+    t.string   "project_type"
+    t.string   "other_project_type"
   end
 
   add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"

@@ -10,37 +10,107 @@
                  } %>
 
       <div class="field form-group">
-        <%= f.required_label :name, :class => 'col-md-2 control-label placeholder-fallback' %><!--   -->
+        <%= f.required_label :name, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
         <div class="col-md-6">
         <%= f.text_field :name, :class => 'text form-control', :required => 'required' %>
         </div>
       </div>
 
       <div class="field form-group">
-        <%= f.required_label :email, :class => 'placeholder-fallback col-md-2 control-label' %>
+        <%= f.required_label :email, :class => 'placeholder-fallback col-md-3 control-label' %>
         <div class="col-md-6">
         <%= f.email_field :email, :class => 'text email form-control', :required => 'required' %>
         </div>
       </div>
 
+      <div class="field form-group">
+        <%= f.label :business_name, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
+        <div class="col-md-6">
+        <%= f.text_field :business_name, :class => 'text form-control' %>
+        </div>
+      </div>
+
       <% if Refinery::Inquiries.show_phone_number_field %>
         <div class="field form-group">
-          <%= f.label :phone, :class => 'placeholder-fallback col-md-2 control-label' %>
+          <%= f.label :phone, :class => 'placeholder-fallback col-md-3 control-label' %>
           <div class="col-md-6">
           <%= f.text_field :phone, :class => 'text phone form-control' %>
           </div>
         </div>
       <% end %>
 
+      <div class="field form-group">
+        <%= f.label :address_1, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
+        <div class="col-md-6">
+        <%= f.text_field :address_1, :class => 'text form-control' %>
+        </div>
+      </div>
+
+      <div class="field form-group">
+        <%= f.label :address_2, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
+        <div class="col-md-6">
+        <%= f.text_field :address_2, :class => 'text form-control' %>
+        </div>
+      </div>
+
+      <div class="field form-group">
+        <%= f.label :city, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
+        <div class="col-md-6">
+        <%= f.text_field :city, :class => 'text form-control' %>
+        </div>
+      </div>      
+
+      <div class="field form-group">
+        <%= f.label :state, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
+        <div class="col-md-6">
+        <%= f.text_field :state, :class => 'text form-control' %>
+        </div>
+      </div>
+
+      <div class="field form-group">
+        <%= f.label :zip, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
+        <div class="col-md-6">
+        <%= f.text_field :zip, :class => 'text form-control' %>
+        </div>
+      </div>      
+
+      <div class="field form-group">
+        <%= f.label :fax, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
+        <div class="col-md-6">
+        <%= f.text_field :fax, :class => 'text form-control' %>
+        </div>
+      </div>
+
+      <div class="field form-group">
+        <%= f.label :project_date, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
+        <div class="col-md-6">
+        <%= f.text_field :project_date, :class => 'text form-control' %>
+        </div>
+      </div>      
+
+      <div class="field form-group">
+        <% @project_type_choices = ['Commercial', 'Agricultural', 'Institutional', 'Concrete', 'Residential', 'Other'] %>
+        <!-- <label for="project_types[]" class='col-md-3 control-label placeholder-fallback'>Project Types</label> -->
+        <%= f.label :project_type, :class => 'col-md-3 control-label placeholder-fallback' %><!--   -->
+        <div class="col-md-6">
+
+          <% @project_type_choices.each do |pt| %>
+            <%= check_box_tag "inquiry[project_type][]", pt, false %><span style="color:rgba(0,0,0,.3);padding-left:.5em;"><%= pt %></span><br />
+          <% end %>          
+
+        <%= f.text_field :other_project_type, style: "color:rgba(0,0,0,.3)" %> 
+        </div>
+      </div>
+
       <div class='field message_field form-group'>
-        <%= f.required_label :message, :class => 'placeholder-fallback col-md-2 control-label' %>
+        <%= f.required_label :message, :class => 'placeholder-fallback col-md-3 control-label' %>
         <div class="col-md-7">
         <%= f.text_area :message, :rows => 8, :required => 'required', :class => 'form-control' %>
         </div>
       </div>
       
       <div class="actions form-group">
-        <div class="col-md-offset-2 col-md-6">
+        <div class="col-md-offset-3 col-md-6">
         <%= f.submit t('.send'), style: 'color:#000000;' %>
         <%= link_to t('.privacy_policy'), "/pages/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
         </div>

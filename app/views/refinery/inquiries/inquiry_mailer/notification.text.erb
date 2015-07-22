@@ -1,0 +1,32 @@
+<%=raw t('.greeting') %>,
+
+<%=raw t('.you_recieved_new_inquiry') %>
+
+<%=raw t('.inquiry_starts') %>
+
+Contact information:
+<%=raw t('.from') %>: <%= @inquiry.name %>
+<%=raw t('.email') %>: <%= @inquiry.email %>
+<%=raw t('.phone') %>: <%= @inquiry.phone %>
+Business Name: <%= @inquiry.business_name %>
+Address (line 1): <%= @inquiry.address_1 %>
+Address (line 2): <%= @inquiry.address_2 %>
+City: <%= @inquiry.city %>
+State: <%= @inquiry.state %>
+Zip: <%= @inquiry.zip %>
+FAX: <%= @inquiry.fax %>
+
+Project information:
+Project Date: <%= @inquiry.project_date %>
+Project Type: <%= @inquiry.project_type %>
+Project Type Other: <%= @inquiry.other_project_type %>
+
+<%=raw t('.message') %>:
+<%=raw strip_tags(@inquiry.message) %>
+
+<%=raw t('.inquiry_ends') %>
+
+<%=raw t('.closing_line') %>,
+<%=raw Refinery::Core.site_name %>
+
+<%=raw t('.ps') -%>
