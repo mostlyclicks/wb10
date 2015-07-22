@@ -50,8 +50,18 @@ Wb10::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   if config.respond_to?(:action_mailer)
-    # config.action_mailer.raise_delivery_errors = false
+    config.action_mailer.raise_delivery_errors = true
   end
+
+  ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.sendgrid.net',
+  :port           => '587',
+  :authentication => :plain,
+  :user_name      => ENV['SENDGRID_USERNAME'],
+  :password       => ENV['SENDGRID_PASSWORD'],
+  :domain         => 'wieserbrothers.com',
+  :enable_starttls_auto => true
+}
 
   # Enable threaded mode
   # config.threadsafe!
