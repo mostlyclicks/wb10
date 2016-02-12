@@ -237,9 +237,10 @@ p, li {
     h3 {
       
       color:darken($wb-text, 30%);
-      font-size:48px;
-      line-height: 1.10em;
+      font-size:43px;
+      line-height: .85em;
     }
+    a {padding-top:18px;}
   }
   h3 {
     font-family: $headline-font;
