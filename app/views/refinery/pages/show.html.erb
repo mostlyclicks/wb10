@@ -25,7 +25,7 @@
             <% if @page.title == 'Employment Opportunities' %>
             <section id="emp-opp-links">
               <h3>Current Openings</h3>
-              <%= @page.content_for(:job_list) %>
+              <%= raw @page.content_for(:job_list) %>
             </section>
             <% end %>
           <%= @page.content_for(:body).html_safe %>          
@@ -55,9 +55,5 @@
 <%= render '/refinery/buckets' %>
 
 
-              <ul>
-                <li><a href="#">Carpenters, Concrete Finishers, &amp; Laborers</a></li>
-                <li><a href="#">Project Administrator</a></li>
-                <li><a href="#">Shop Assistant</a></li>
-              </ul>
+              
 
