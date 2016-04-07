@@ -22,9 +22,13 @@
         </div>
         <div class="row">
           <div class="col-md-6">
-            
-            <%= @page.content_for(:body).html_safe %>
-          <%#= render '/refinery/content_page' %>
+            <% if @page.title == 'Employment Opportunities' %>
+            <section id="emp-opp-links">
+              <h3>Current Openings</h3>
+              <%= @page.content_for(:emp_main_links) %>
+            </section>
+            <% end %>
+          <%= @page.content_for(:body).html_safe %>          
           </div>
           <div class="col-md-6" id="sidebar">
             <% @page.images.each do |i| %>
