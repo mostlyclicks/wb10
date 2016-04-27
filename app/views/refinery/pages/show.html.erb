@@ -36,7 +36,7 @@
             <% end %>
 
             
-              <% if @page.title == 'Employment Opportunities' || @page.parent == 'Employment Opportunities' %>
+              <% if @page.title == 'Employment Opportunities' || @page.parent.title == 'Employment Opportunities' %>
               <blockquote>
                 <%= raw @page.content_for(:employee_quote) %>
               </blockquote>
