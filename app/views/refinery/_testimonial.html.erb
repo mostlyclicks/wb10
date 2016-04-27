@@ -8,7 +8,7 @@
 </blockquote>
 <% else %>
   <blockquote>
-  <span>&ldquo;</span><%= @testimonial_sample.testimonial_text %>&rdquo;<br /><br />
+  <span>&ldquo;</span><%= raw @testimonial_sample.testimonial_text %>&rdquo;<br /><br />
 
   <small>
     <%= @testimonial_sample.client %> | 
