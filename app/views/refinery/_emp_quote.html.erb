@@ -1,0 +1,14 @@
+<%# if @page.title == 'Employment Opportunities' || @page.parent.slug == 'employment-opportunities' %>
+              <%#= @page.parent.title %>
+              <blockquote>
+                <%= raw @page.content_for(:employee_quote) %>
+              </blockquote>
+              <% else %>
+              <blockquote>
+                <%= render '/refinery/testimonial' %>
+              </blockquote>
+              <% end %>
+
+<blockquote>
+
+</blockquote>

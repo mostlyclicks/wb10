@@ -3,7 +3,7 @@ module Refinery
     class Testimonial < Refinery::Core::BaseModel
       self.table_name = 'refinery_testimonials'
 
-      attr_accessible :title, :testimonial_text, :image_id, :client, :company, :position
+      attr_accessible :title, :testimonial_text, :image_id, :client, :company, :position, :testimonial_type
 
       validates :title, :presence => true, :uniqueness => true
 

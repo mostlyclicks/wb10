@@ -8,6 +8,12 @@
     <%= f.text_field :title, :class => 'larger widest' -%>
   </div>
 
+  <div class="field">
+    <%= f.label :testimonial_type %>
+    <%= f.select :testimonial_type, ['Client', 'Employee'], :prompt => 'Select Testimonial Type' %>
+
+  </div>
+
   <div class='field'>
     <%= render '/refinery/admin/wysiwyg',
                 :f => f,

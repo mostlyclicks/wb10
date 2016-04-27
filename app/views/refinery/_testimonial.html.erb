@@ -1,5 +1,44 @@
+<% if @page.title == 'Employment Opportunities' || (@page.parent.present? && @page.parent.title == 'Employment Opportunities') %>
+  <blockquote>
+  <span>&ldquo;</span><%= @employee_testimonial.testimonial_text %>&rdquo;<br /><br />
+  <small>
+    <%= raw @employee_testimonial.client %>
+    <%= ' | ' + @employee_testimonial.company unless @employee_testimonial.company.empty? %>
+  </small>
+</blockquote>
+<% else %>
+  <blockquote>
+  <span>&ldquo;</span><%= @testimonial_sample.testimonial_text %>&rdquo;<br /><br />
 
-<span>&ldquo;</span><%= @testimonial_sample.testimonial_text %>&rdquo;<br /><br />
-<small><%= @testimonial_sample.client %> | 
-<%= @testimonial_sample.company %></small>
+  <small>
+    <%= @testimonial_sample.client %> | 
+    <%= @testimonial_sample.company %>
+  </small>
+  </blockquote>
 
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+<%# if @page.title == 'Employment Opportunities' || @page.parent.slug == 'employment-opportunities' %>
+              <%#= @page.parent.title %>
+<!--               <blockquote>
+                <%#= raw @page.content_for(:employee_quote) %>
+              </blockquote>
+              <%# else %>
+              <blockquote>
+                <%#= render '/refinery/testimonial' %>
+              </blockquote>
+              <%# end %>
+
+<blockquote>
+ -->
+<!-- </blockquote> -->

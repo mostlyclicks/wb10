@@ -16,8 +16,24 @@ class ApplicationController < ActionController::Base
       #     @testimonials << t
       #   end
       # end
+
+
+      #Load all testimonials
       @testimonials = Refinery::Testimonials::Testimonial.all
       @testimonial_sample = @testimonials.sample
+      @employee_testimonial = Refinery::Testimonials::Testimonial.where(testimonial_type: 'Employee').first
+
+      # @emp_testimonial = Refinery::Testimonials::Testimonial.where(testimonial_type: 'Employee').first
+      
+      
+      # @testimonials.each do |te|
+      #   if te.testimonial_type == 'Employee'
+      #     @testimonial_sample = te
+      #   else
+          
+      #   end
+      # end
+
     end
 
 
