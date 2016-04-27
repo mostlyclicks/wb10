@@ -36,17 +36,9 @@
             <% end %>
 
             
-              <% if @page.title == 'Employment Opportunities' || @page.parent.title == 'Employment Opportunities' %>
-              <blockquote>
-                <%= raw @page.content_for(:employee_quote) %>
-              </blockquote>
-              <% else %>
-              <blockquote>
-                <%= render '/refinery/testimonial' %>
-              </blockquote>
-              <% end %>
+              
             
-
+              <%= render '/refinery/testimonial' %>
             <%= render '/refinery/address' %>
 
             
