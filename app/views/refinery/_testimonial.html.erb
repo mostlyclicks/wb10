@@ -1,6 +1,6 @@
 <% if @page.title == 'Employment Opportunities' || (@page.parent.present? && @page.parent.title == 'Employment Opportunities') %>
   <blockquote>
-  <span>&ldquo;</span><%= @employee_testimonial.testimonial_text %>&rdquo;<br /><br />
+  <span>&ldquo;</span><%= raw @employee_testimonial.testimonial_text %>&rdquo;<br /><br />
   <small>
     <%= @employee_testimonial.client %>
     <%= ' | ' + @employee_testimonial.company unless @employee_testimonial.company.empty? %>
