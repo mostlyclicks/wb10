@@ -35,7 +35,17 @@
               <%= image_tag i.url, class: 'img-responsive' %>
             <% end %>
 
-            <blockquote><%= render '/refinery/testimonial' %></blockquote>
+            
+              <% if @page.title == 'Employment Opportunities' || @page.parent == 'Employment Opportunities' %>
+              <blockquote>
+                <%= raw @page.content_for(:employee_quote) %>
+              </blockquote>
+              <% else %>
+              <blockquote>
+                <%= render '/refinery/testimonial' %>
+              </blockquote>
+              <% end %>
+            
 
             <%= render '/refinery/address' %>
 
