@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     end
 
     def get_testimonials
-      @testimonials = Refinery::Testimonials::Testimonial.where(testimonial_type: 'Client')
+      @testimonials = Refinery::Testimonials::Testimonial.all
       @testimonial_sample = @testimonials.sample
       @employee_testimonial = Refinery::Testimonials::Testimonial.where(testimonial_type: 'Employee').first
     end
