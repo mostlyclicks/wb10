@@ -1,5 +1,13 @@
 module ApplicationHelper
 
+
+ 
+
+
+
+
+
+
   def main_nav
     presenter = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self)
     presenter.menu_tag = "div class=\"collapse navbar-collapse navbar-inverse main-nav\" id=\"main-nav-collapse\""

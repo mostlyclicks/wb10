@@ -2,6 +2,22 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :get_categories, :get_testimonials
 
+  helper_method :check_page, :authenticate_page
+
+  def check_page
+      authenticate_page
+  end
+
+
+  def authenticate_page
+      authenticate_or_request_with_http_basic do |username, password|
+        username == "wieser" && password == "wbsafety"
+      end
+  end
+
+
+
+
   protected
 
     def get_categories
