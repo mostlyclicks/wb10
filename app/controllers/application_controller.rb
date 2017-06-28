@@ -12,6 +12,8 @@ class ApplicationController < ActionController::Base
   def authenticate_page
       authenticate_or_request_with_http_basic do |username, password|
         username == "wieser" && password == "wbsafety"
+      else
+        redirect_to '/unauthorized'
       end
   end
 
