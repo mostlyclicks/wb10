@@ -1,0 +1,23 @@
+<% content_for :head_redir do %>
+  <meta http-equiv="refresh" content="2; URL='https://msdsmanagement.msdsonline.com/0e7c89d7-0615-4059-8eec-baa966b2c76e/ebinder/?nas=True" />
+<% end %>
+
+<% content_for :body do %>
+  <ul id="redirects">
+    <% @redirects.each do |redirect| %>
+      <li>
+        <%= link_to redirect.title, refinery.redirects_redirect_path(redirect) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<div class="container" id="l2-main">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render '/refinery/content_page' %>
+    </div>
+  </div>
+</div>
+

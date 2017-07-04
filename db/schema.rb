@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160427162538) do
+ActiveRecord::Schema.define(:version => 20170704134109) do
 
   create_table "refinery_categories", :force => true do |t|
     t.string   "name"
@@ -187,6 +187,14 @@ ActiveRecord::Schema.define(:version => 20160427162538) do
   end
 
   add_index "refinery_projects", ["slug"], :name => "index_refinery_projects_on_slug"
+
+  create_table "refinery_redirects", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"

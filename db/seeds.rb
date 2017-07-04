@@ -46,3 +46,6 @@ Refinery::Search::Engine.load_seed
 
 # Added by Refinery CMS Testimonials extension
 Refinery::Testimonials::Engine.load_seed
+
+# Added by Refinery CMS Redirects extension
+Refinery::Redirects::Engine.load_seed
